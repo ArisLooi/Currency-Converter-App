@@ -47,6 +47,7 @@ Currency-Converter-App/
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
 ## Acknowledgments
-Thanks to all the developers who have contributed to open-source projects and made learning to code accessible to everyone.
+- This project uses the Currency API for fetching exchange rates.
+- Thanks to all the developers who have contributed to open-source projects and made learning to code accessible to everyone.
 
 Happy coding! 😊
