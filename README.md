@@ -21,7 +21,7 @@ Make sure you have a modern web browser installed.
    ```bash
    git clone https://github.com/ArisLooi/Currency-Converter-App.git
 2. Navigate to the project directory:
-    bash
+    ```bash
     cd Currency-Converter-App
 3. Open index.html in your web browser to view the application.
 
