@@ -1,14 +1,22 @@
+// Selecting HTML elements
 const amountInput = document.getElementById('amount');
 const fromCurrencySelect = document.getElementById('from-currency');
 const toCurrencySelect = document.getElementById('to-currency');
 const convertButton = document.getElementById('convert-btn');
 const resetButton = document.getElementById('reset-btn');
-const resultElement = document.querySelector('.result');
+const resultElement = document.getElementById('result');
 
+// Function to convert currency
 const convertCurrency = async () => {
   const amount = amountInput.value;
-  const fromCurrency = fromCurrencySelect.value.toUpperCase(); // Ensure fromCurrency is uppercase
-  const toCurrency = toCurrencySelect.value.toUpperCase(); // Ensure toCurrency is uppercase
+  const fromCurrency = fromCurrencySelect.value.toUpperCase();
+  const toCurrency = toCurrencySelect.value.toUpperCase();
+
+  // Input validation
+  if (isNaN(amount) || amount <= 0) {
+    resultElement.textContent = 'Please enter a valid positive amount.';
+    return;
+  }
 
   try {
     const response = await fetch(
@@ -31,12 +39,14 @@ const convertCurrency = async () => {
   }
 };
 
+// Function to reset input fields and result
 const resetFields = () => {
   amountInput.value = '';
-  fromCurrencySelect.value = 'usd';
-  toCurrencySelect.value = 'usd';
+  fromCurrencySelect.selectedIndex = 0;
+  toCurrencySelect.selectedIndex = 0;
   resultElement.textContent = '';
 };
 
+// Event listeners for buttons
 resetButton.addEventListener('click', resetFields);
 convertButton.addEventListener('click', convertCurrency);
