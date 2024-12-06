@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/a9d701ca-7d78-4870-ab94-d62b8a97da3b)# Currency-Converter-App
+# Currency-Converter-App
 
 A web-based currency converter application that allows users to convert amounts between different currencies using real-time exchange rates.
 
@@ -36,8 +36,6 @@ Make sure you have a modern web browser installed.
 Currency-Converter-App/
 ├── README.md
 ├── index.html
-├── package-lock.json
-├── package.json
 ├── script.js
 └── styles.css
 
